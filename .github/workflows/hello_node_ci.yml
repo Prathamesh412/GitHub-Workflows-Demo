@@ -45,7 +45,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./docker/app1-hello/node
           file: docker/app1-hello/node/Dockerfile
           tags: ${{ secrets.DOCKER_USERNAME }}/hello-app-node:latest
           push: true
